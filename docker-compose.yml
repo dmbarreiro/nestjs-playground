@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  nestjs_playground:
+    build: ./
+    volumes:
+      - ./:/workspace
+    ports:
+      - 3000:3000 # forward default NestJS port
+    stdin_open: true
+    tty: true
+    restart: on-failure
